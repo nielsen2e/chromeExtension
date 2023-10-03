@@ -1,8 +1,14 @@
-# app.py
-from resources import create_app
+from flask import Flask
+from flask_cors import CORS  # Import the CORS function
+from resources.blp import blp
 
+app = Flask(__name__)
 
-app = create_app()
+# Use CORS with your app instance
+CORS(app)
+
+# Register the blueprint
+app.register_blueprint(blp)
 
 if __name__ == "__main__":
     app.run()

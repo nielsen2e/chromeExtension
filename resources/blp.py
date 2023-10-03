@@ -6,6 +6,8 @@ from werkzeug.utils import secure_filename
 import tempfile
 from moviepy.editor import VideoFileClip
 
+# Import the required function from resources
+from resources.utils import generate_unique_filename
 
 blp = Blueprint("videos", __name__)
 
